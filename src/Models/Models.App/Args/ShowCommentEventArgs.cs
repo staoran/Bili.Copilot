@@ -1,50 +1,40 @@
-ï»¿// Copyright (c) Bili Copilot. All rights reserved.
+// Copyright (c) Bili Copilot. All rights reserved.
 
 using Bili.Copilot.Models.Constants.Bili;
 
 namespace Bili.Copilot.Models.App.Args;
 
 /// <summary>
-/// æ˜¾ç¤ºè¯„è®ºè¯¦æƒ…çš„äº‹ä»¶å‚æ•°.
+/// ÏÔÊ¾ÆÀÂÛÏêÇéµÄÊÂ¼ş²ÎÊı.
 /// </summary>
 public sealed class ShowCommentEventArgs : EventArgs
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="ShowCommentEventArgs"/> class.
     /// </summary>
-    /// <param name="type">è¯„è®ºåŒºç±»å‹.</param>
-    /// <param name="sortType">è¯„è®ºåŒºæ’åºæ–¹å¼.</param>
-    /// <param name="sourceId">è¯„è®ºæº Id.</param>
-    public ShowCommentEventArgs(
-        CommentType type,
-        CommentSortType sortType,
-        string sourceId,
-        string title = default)
+    /// <param name="type">ÆÀÂÛÇøÀàĞÍ.</param>
+    /// <param name="sortType">ÆÀÂÛÇøÅÅĞò·½Ê½.</param>
+    /// <param name="sourceId">ÆÀÂÛÔ´ Id.</param>
+    public ShowCommentEventArgs(CommentType type, CommentSortType sortType, string sourceId)
     {
         Type = type;
         SortType = sortType;
         SourceId = sourceId;
-        Title = title;
     }
 
     /// <summary>
-    /// è¯„è®ºåŒºç±»å‹.
+    /// ÆÀÂÛÇøÀàĞÍ.
     /// </summary>
     public CommentType Type { get; }
 
     /// <summary>
-    /// è¯„è®ºåŒºæ’åºæ–¹å¼.
+    /// ÆÀÂÛÇøÅÅĞò·½Ê½.
     /// </summary>
     public CommentSortType SortType { get; }
 
     /// <summary>
-    /// è¯„è®ºæº Id.
+    /// ÆÀÂÛÔ´ Id.
     /// </summary>
     public string SourceId { get; }
-
-    /// <summary>
-    /// è¯„è®ºæºæ ‡é¢˜.
-    /// </summary>
-    public string Title { get; set; }
 }
 
